@@ -1,0 +1,167 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav ul li a {
+    color: #333;
+    font-weight: bold;
+}
+
+.btn-contacto {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #555;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.buttons a {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.buttons a:hover {
+    background-color: #ddd;
+}
+
+/* Form */
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-container label {
+    font-size: 0.9rem;
+}
+
+/* Divisions */
+.divisions {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.divisions-header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.divisions-header p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.divisions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.division-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.division-card:hover {
+    transform: translateY(-5px);
+}
+
+.division-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.division-card a {
+    color: #007bff;
+    font-weight: bold;
+}

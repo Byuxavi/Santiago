@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/book.css">
+    <title>Book Now - WS Property Management</title>
+    <link rel="icon" href="/images/WSBlackdorado-20.png" type="image/png">
+    <script>
+        // Validación de formulario con JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('bookingForm').addEventListener('submit', function(event) {
+                var email = document.querySelector('[name="email"]').value;
+                var phone = document.querySelector('[name="phone"]').value;
+                var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                var phonePattern = /^[0-9]{10}$/; // Asume que el teléfono tiene 10 dígitos
+
+                // Validar email
+                if (!email.match(emailPattern)) {
+                    alert('Por favor, ingresa un correo electrónico válido.');
+                    event.preventDefault();
+                }
+
+                // Validar teléfono
+                if (!phone.match(phonePattern)) {
+                    alert('Por favor, ingresa un número de teléfono válido (10 dígitos).');
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Barra Superior -->
+    <div class="top-bar">
+        <p>Call us at <a href="tel:+35679312793">+35679312793</a> | Email: <a href="mailto:jsmangement@gmail.com">jsmangement@gmail.com</a></p>
+    </div>
+    
+    <!-- Header -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="/images/WSBlackdorado-20.png" alt="Grupo Ocean Logo">
+        </div>
+        <nav class="nav-links">
+            <a href="js.html">Our Services</a>
+            <a href="#">About Us</a>
+            <a href="https://wa.me/35679312793" class="btn-contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="/images/book.jpg" alt="Decoración" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Book Our Services Easily</h1>
+            <h2>WS Property Management</h2>
+            <p>Fill out the form below and we will get back to you as soon as possible.</p>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-form">
+        <div class="form-container">
+            <h3>Request a Quote:</h3>
+            <form id="bookingForm" action="https://tuservidor.com/envioFormulario" method="POST">
+                <input type="text" name="fullName" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <input type="text" name="postalCode" placeholder="Postal Code" required>
+                
+                <select name="service" required>
+                    <option value="" disabled selected>Select a Service</option>
+                    <option value="cleaning">Cleaning</option>
+                    <option value="concierge">Concierge</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="gardening">Gardening</option>
+                    <option value="pool">Pool Services</option>
+                    <option value="lifeguard">Lifeguard</option>
+                    <option value="facility">Facility Services</option>
+                    <option value="outsourcing">Outsourcing</option>
+                </select>
+                
+                <textarea name="request" placeholder="Describe your request or inquiry" required></textarea>
+                
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Grupo Ocean. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

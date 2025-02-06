@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #242424;
+    color: #e3d3ab;
+}
+
+.top-bar {
+    background-color: #201030;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.top-bar a {
+    color: #e3d3ab;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.top-bar a:hover {
+    color: #d1c29a;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #040404;
+    border-bottom: 2px solid #7c7c74;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e3d3ab;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #d1c29a;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    background: url('images/js.png') center/cover no-repeat;
+    position: relative;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: #e3d3ab;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #d1d1d1;
+}
+
+.booking-form {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-color: #2e2e2e;
+}
+
+.form-container {
+    background-color: #1a1a1a;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    text-align: center;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 2px solid #e3d3ab;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #242424;
+    color: #e3d3ab;
+}
+
+form button {
+    width: 100%;
+    background-color: #e3d3ab;
+    color: #242424;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #d1c29a;
+}
+
+.footer {
+    background-color: #040404;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que cubra todo el header */
+    opacity: 0.3; /* Ajusta la transparencia */
+    z-index: 1; /* Debajo del contenido pero encima del fondo */
+}
