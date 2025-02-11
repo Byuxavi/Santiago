@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <link rel="stylesheet" href="prices.css">
+    <script src="prices.js" defer></script> 
+    <link rel="icon" href="images/WSBlackdorado.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="active"><a href="ws.html">Home</a></li>
+                <li><a href="prices.html">Post Construction</a></li>
+                <li><a href="book.html">Handyman</a></li>
+                <li><a href="book.html">Condominium Cleaning</a></li>
+                <li><a href="book.html">Upholstery</a></li>
+                <li><a href="prices.html">Short-Lets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="form-section">
+            <h2>Price Simulation: Get an Instant Estimate!</h2>
+            <p>Use our interactive tool to see an estimated price for your cleaning service. This is a simulation to give you an idea of what to expect before booking!</p>            
+
+            <div class="form-group">
+                <label>Location</label>
+                <select id="area">
+                    <option value="Central">Central Region</option>
+                    <option value="North">North Region</option>
+                    <option value="South">South Region</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Services</label>
+                <p>Click <span class="highlight">here</span> to view our cleaning list.</p>
+                <select id="service">
+                    <option value="Standard Cleaning">Standard Cleaning</option>
+                    <option value="Deep Cleaning">Deep Cleaning</option>
+                    <option value="Post-Construction Cleaning">Post-Construction Cleaning</option>
+                    <option value="Office Cleaning">Office Cleaning</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Frequency</label>
+                <p>Save by choosing a recurring service!</p>
+                <div class="buttons">
+                    <button class="active">One-Time</button>
+                    <button>Daily</button>
+                    <button>Weekly</button>
+                    <button>Monthly</button>
+                    <button>Every Two Weeks</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary">
+            <div class="summary-header">
+                <h3>Booking Summary</h3>
+                <button class="toggle-summary">▼</button>
+            </div>
+            <ul>
+            
+                <li><span>Service:</span> <span id="summary-service">Standard Cleaning</span></li>
+                <li><span>Bedrooms:</span> <span id="summary-bedrooms">Studio</span></li>
+                <li><span>Bathrooms:</span> <span id="summary-bathrooms">1 Bathroom</span></li>
+                <li><span>Floors:</span> <span id="summary-floors">1 Floor</span></li>
+                <li><span>Property:</span> <span id="summary-property">Apartment</span></li>
+                <li><span>Duration:</span> <span id="summary-duration">2h 40min</span></li>
+            
+            </ul>
+            <div class="total">
+                <p>Total Before Taxes: <strong id="total-before-taxes">€50.00</strong></p>
+                <p class="final-price">TOTAL: <strong id="final-price">€59.00</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="details-section">
+        <h2>What Needs To Be Done?</h2>
+        <div class="details-grid">
+            <div class="detail-item">
+                <label for="bedrooms">How Many Bedrooms Need Cleaning?</label>
+                <select id="bedrooms">
+                    <option>Studio</option>
+                    <option>1 Bedroom</option>
+                    <option>2 Bedrooms</option>
+                    <option>3 Bedrooms</option>
+                    <option>4+ Bedrooms</option>
+                </select>
+            </div>
+            <div class="detail-item">
+                <label for="bathrooms">How Many Bathrooms Need Cleaning?</label>
+                <select id="bathrooms">
+                    <option>1 Bathroom</option>
+                    <option>2 Bathrooms</option>
+                    <option>3 Bathrooms</option>
+                    <option>4+ Bathrooms</option>
+                </select>
+            </div>
+            <div class="detail-item">
+                <label for="floors">Over How Many Floors Is The Property?</label>
+                <select id="floors">
+                    <option>1 Floor</option>
+                    <option>2 Floors</option>
+                    <option>3 Floors</option>
+                    <option>4+ Floors</option>
+                </select>
+            </div>
+            <div class="detail-item">
+                <label for="propertyType">Type Of Property</label>
+                <select id="propertyType">
+                    <option>Apartment</option>
+                    <option>House</option>
+                    <option>Townhouse</option>
+                    <option>Villa</option>
+                    <option>Other</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="extras-section">
+        <h2>Select Extras 🛠️</h2>
+        <div id="extras-container" class="extras-grid">
+            <div class="extra-item" data-name="Capri & Cool Diffuser">🌿 Capri & Cool Diffuser</div>
+            <div class="extra-item" data-name="Shower Glass Descaler">🚿 Shower Glass Descaler</div>
+            <div class="extra-item" data-name="Bathroom Deep Clean">🛁 Bathroom Deep Clean</div>
+            <div class="extra-item" data-name="Kitchen Deep Clean">🍽️ Kitchen Deep Clean</div>
+            <div class="extra-item" data-name="Mattress Cleaning">🛏️ Mattress Cleaning</div>
+            <div class="extra-item" data-name="Basic Mold Removal (Per Room)">🌫️ Basic Mold Removal (Per Room)</div>
+            <div class="extra-item" data-name="Yard Cleaning">🌿 Yard Cleaning</div>
+            <div class="extra-item" data-name="Sofa Cleaning">🛋️ Sofa Cleaning</div>
+            <div class="extra-item" data-name="Window Cleaning">🪟 Window Cleaning</div>
+            <div class="extra-item" data-name="BBQ Cleaning">🍖 BBQ Cleaning</div>
+            <div class="extra-item" data-name="Quilt Wash">🛏️ Quilt Wash</div>
+        </div>
+        
+        <h3>Selected Extras:</h3>
+        <p id="summary-extras">None</p>
+    </div>
+<!-- Contacto por WhatsApp -->
+<section class="contact-whatsapp">
+    <h2>¿Prefieres hablar por WhatsApp?</h2>
+    <p>Haz clic en el botón y te responderé lo antes posible.</p>
+    <a href="https://wa.me/35679312793" target="_blank" class="cta-button">Enviar mensaje por WhatsApp</a>
+</section>
+    <footer class="footer">
+        <p>© 2024 WS Property Management. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

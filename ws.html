@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WS Property Management</title>
-    <link rel="stylesheet" href="js.css">
+    <link rel="stylesheet" href="ws.css">
     <link rel="script" href="script.js">
     <link rel="icon" href="images/WSBlackdorado.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
     <!-- Barra superior con enlaces clickeables -->
     <div class="top-bar">
         <span>
-            <a href="mailto:jsmangement@gmail.com">jsmangement@gmail.com</a> | 
+            <a href="mailto:wsinstallation.info@gmail.com">wsinstallation.info@gmail.com</a> | 
             <a href="tel:+35679312793">+356 7931 2793</a> | 
             <a href="https://wa.me/35679312793" target="_blank">WhatsApp +356 7931 2793</a>
         </span>
@@ -27,16 +27,15 @@
         </div>
         <div class="nav-links">
             <a href="book.html">Short Lets / Home</a>
-            <a href="book.html">Laundry</a>
             <a href="book.html">Cleaning</a>
-            <a href="book.html">Business</a>
+            <a href="book.html">Post Construction</a>
             <a href="book.html">Handyman</a>
         </div>
         <div class="nav-buttons">
             <button class="btn-primary">Book Now</button>
         </div>
     </nav>
-
+    
     <!-- Hero Section -->
     <header class="hero">
         <img src="/images/js.png" alt="Decoración" class="hero-bg">
@@ -53,32 +52,28 @@
     <!-- Sección de Servicios -->
     <section class="services">
         <div class="services-content">
-            <h2>Our Services</h2>
-            <p>We manage everything for you, from cleaning to maintenance and beyond.</p>
-            <div class="service-tags">
-                <button>Project Management</button>
-                <button>Task Management</button>
-                <button>Client Projects</button>
-                <button>Business Operations</button>
-                <button>Resource Management</button>
-                <button>Portfolio Management</button>
-                <button>Goals & Strategy</button>
-                <button>Requests & Approvals</button>
-                <button>Create Your Own</button>
-            </div>
+            <h2>Price Simulation: Get an Instant Estimate!</h2>
+            <p>Use our interactive tool to see an estimated price for your cleaning service. This is a simulation to give you an idea of what to expect before booking!.</p>
             <div class="cta">
-                <button class="btn-primary">Get Started →</button>
+                <button class="btn-secondary">Get Started →</button>
             </div>
         </div>
     </section>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Seleccionar los botones específicos que deben llevar a book.html
-            var buttons = document.querySelectorAll(".btn-primary, .btn-secondary, .service-tags button");
-    
-            buttons.forEach(function (button) {
+            // Manejo de botones que llevan a book.html
+            var primaryButtons = document.querySelectorAll(".btn-primary");
+            primaryButtons.forEach(function (button) {
                 button.addEventListener("click", function () {
                     window.location.href = "book.html";
+                });
+            });
+    
+            // Manejo de botones que llevan a prices.html
+            var secondaryButtons = document.querySelectorAll(".btn-secondary");
+            secondaryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    window.location.href = "prices.html";
                 });
             });
         });

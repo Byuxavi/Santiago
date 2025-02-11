@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     buttons.forEach(function (button) {
         button.addEventListener("click", function () {
-            window.location.href = "book.html";
+            window.location.href = "prices.html";
         });
     });
 });

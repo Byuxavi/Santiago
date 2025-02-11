@@ -1,0 +1,278 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #242424;
+    color: #e3d3ab;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #201030;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    overflow-x: auto;
+    gap: 1rem;
+}
+
+nav li {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #e3d3ab;
+    transition: color 0.3s ease-in-out;
+}
+
+nav li a:hover, nav li.active a {
+    color: #d1c29a;
+    font-weight: bold;
+}
+
+/* Container and Layout */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+/* Form Sections */
+.form-section, .details-section, .extras-section, .summary, .faq {
+    background: #2e2e2e;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #e3d3ab;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+p {
+    color: #d1d1d1;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #e3d3ab;
+}
+
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e3d3ab;
+    border-radius: 5px;
+    background-color: #242424;
+    color: #e3d3ab;
+    transition: border 0.3s ease-in-out;
+}
+
+select:focus {
+    border-color: #d1c29a;
+    outline: none;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    background: #e3d3ab;
+    color: #242424;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background-color: #d1c29a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button.active {
+    background: #d1c29a;
+}
+
+/* Summary Section */
+.summary {
+    position: sticky;
+    top: 100px;
+}
+
+.summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.summary ul {
+    list-style: none;
+}
+
+.summary li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    color: #d1c29a;
+}
+
+.final-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #e3d3ab;
+}
+
+/* Extras Grid */
+.extras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.extra-item {
+    padding: 1rem;
+    border: 2px solid #e3d3ab;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s, border 0.2s;
+    color: #e3d3ab;
+}
+
+.extra-item:hover {
+    border-color: #d1c29a;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+}
+
+.faq {
+    background: #2e2e2e;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.faq:hover {
+    transform: translateY(-3px);
+}
+
+.faq h3 {
+    font-size: 1.4rem;
+    color: #e3d3ab;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #d1c29a;
+    padding-bottom: 0.5rem;
+}
+
+.faq ul {
+    list-style: none;
+    padding: 0;
+}
+
+.faq li {
+    padding: 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.faq li:hover {
+    background-color: #e3d3ab;
+    color: #242424;
+}
+/* WhatsApp Contact Section */
+.contact-whatsapp {
+    background: #2e2e2e;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.contact-whatsapp h2 {
+    color: #e3d3ab;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.contact-whatsapp p {
+    color: #d1d1d1;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #25D366;
+    color: #242424;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background: #1ebe5d;
+    transform: translateY(-2px);
+}
+.extra-item.selected {
+    background-color: #d1c29a;
+    color: #242424;
+    font-weight: bold;
+}
