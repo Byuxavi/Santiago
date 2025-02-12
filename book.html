@@ -6,32 +6,10 @@
     <link rel="stylesheet" href="book.css">
     <title>Book Now - WS Property Management</title>
     <link rel="icon" href="images/WSBlackdorado.png" type="image/png">
-    <script>
-        // Validación de formulario con JavaScript
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('bookingForm').addEventListener('submit', function(event) {
-                var email = document.querySelector('[name="email"]').value;
-                var phone = document.querySelector('[name="phone"]').value;
-                var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-                var phonePattern = /^[0-9]{10}$/; // Asume que el teléfono tiene 10 dígitos
-
-                // Validar email
-                if (!email.match(emailPattern)) {
-                    alert('Por favor, ingresa un correo electrónico válido.');
-                    event.preventDefault();
-                }
-
-                // Validar teléfono
-                if (!phone.match(phonePattern)) {
-                    alert('Por favor, ingresa un número de teléfono válido (10 dígitos).');
-                    event.preventDefault();
-                }
-            });
-        });
-    </script>
+    <script defer src="book.js"></script>
 </head>
 <body>
-    <!-- Barra Superior -->
+    <!-- Top Bar -->
     <div class="top-bar">
         <p>Call us at <a href="tel:+35679312793">+35679312793</a> | Email: <a href="mailto:jsmangement@gmail.com">jsmangement@gmail.com</a></p>
     </div>
@@ -63,21 +41,21 @@
     <section class="booking-form">
         <div class="form-container">
             <h3>Request a Quote:</h3>
-            <form id="bookingForm" action="https://tuservidor.com/envioFormulario" method="POST">
+            <form id="bookingForm" action="https://formspree.io/f/xyyqnkaz" method="POST">
                 <input type="text" name="fullName" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
                 <input type="text" name="postalCode" placeholder="Postal Code" required>
                 
                 <select name="service" required>
                     <option value="" disabled selected>Select a Service</option>
                     <option value="cleaning">Cleaning</option>
-                    <option value="concierge">Concierge</option>
-                    <option value="maintenance">Maintenance</option>
+                    <option value="Short Lets">Short Lets</option>
+                    <option value="Condominium Cleaning">Condominium Cleaning</option>
                     <option value="gardening">Gardening</option>
-                    <option value="pool">Pool Services</option>
-                    <option value="lifeguard">Lifeguard</option>
-                    <option value="facility">Facility Services</option>
+                    <option value="Post Construction">Post Construction</option>
+                    <option value="Handyman">Handyman</option>
+                    <option value="Upholstery">Upholstery</option>
                     <option value="outsourcing">Outsourcing</option>
                 </select>
                 
